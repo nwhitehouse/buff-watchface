@@ -1,0 +1,3 @@
+project.manifest = manifest.xml
+# Normal build: the real clock and data. `mockup.jungle` swaps in the frozen design-check values instead.
+base.excludeAnnotations = mockup

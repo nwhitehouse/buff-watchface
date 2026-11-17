@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<iq:manifest version="3" xmlns:iq="http://www.garmin.com/xml/connectiq">
+    <!--
+        Buff watch face. Laid out for 454x454 AMOLED watches with the on-watch watch-face editor (Customize).
+        Tested on the fēnix 8 47/51 mm (fenix847mm); the others build and should work, but are untested.
+        If you publish your own version to the Connect IQ Store, give it a new id (any 32 hex digits).
+        ComplicationSubscriber: reading what each arc tracks. UserProfile: active calories (your weight, height, age)
+        and resting heart rate. Background and Communications: only the optional calorie deficit mode.
+    -->
+    <iq:application id="65e9326e864947e6adf1b68e91bcdcaa" type="watchface" name="@Strings.AppName" entry="BuffApp" launcherIcon="@Drawables.LauncherIcon" minApiLevel="5.1.0">
+        <iq:products>
+            <iq:product id="fenix847mm"/>
+            <iq:product id="fenix8pro47mm"/>
+            <iq:product id="fenix947mm"/>
+            <iq:product id="fenix9pro47mm"/>
+            <iq:product id="fr57047mm"/>
+            <iq:product id="fr970"/>
+            <iq:product id="venu445mm"/>
+            <iq:product id="marq3"/>
+            <iq:product id="d2mach2"/>
+            <iq:product id="d2mach2pro"/>
+        </iq:products>
+        <iq:permissions>
+            <iq:uses-permission id="Background"/>
+            <iq:uses-permission id="Communications"/>
+            <iq:uses-permission id="ComplicationSubscriber"/>
+            <iq:uses-permission id="UserProfile"/>
+        </iq:permissions>
+        <iq:languages>
+            <iq:language>eng</iq:language>
+        </iq:languages>
+        <iq:barrels/>
+    </iq:application>
+</iq:manifest>

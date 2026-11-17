@@ -1,0 +1,15 @@
+# Build output
+bin/
+*.prg
+*.prg.debug.xml
+*.iq
+
+# Developer keys: never commit
+*.der
+*.pem
+
+# Python
+__pycache__/
+
+# macOS
+.DS_Store

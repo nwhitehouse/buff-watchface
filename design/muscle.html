@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Muscle buddy watch face</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 454px; height: 454px; border-radius: 50%; background: radial-gradient(circle at 50% 48%, #0d0b09 0%, #050404 60%, #000000 100%); position: relative; overflow: hidden; font-family: 'Barlow Condensed', sans-serif; color: #ffffff; font-variant-numeric: tabular-nums">
+<svg width="454" height="454" viewBox="0 0 454 454" style="position: absolute; left: 0; top: 0" aria-hidden="true">
+<defs>
+<linearGradient id="mSteps" gradientUnits="userSpaceOnUse" x1="0" y1="40" x2="0" y2="420"><stop offset="0" stop-color="#FFFFFF"></stop><stop offset="1" stop-color="#A6A6A6"></stop></linearGradient>
+<linearGradient id="mDef" gradientUnits="userSpaceOnUse" x1="0" y1="40" x2="0" y2="420"><stop offset="0" stop-color="#F7ECD3"></stop><stop offset="0.5" stop-color="#E8D5A8"></stop><stop offset="1" stop-color="#B49D6E"></stop></linearGradient>
+<filter id="mLift" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="3" stdDeviation="3.5" flood-color="#000000" flood-opacity="0.95"></feDropShadow></filter>
+</defs>
+<circle cx="227" cy="227" r="205" fill="none" stroke="#242424" stroke-width="4" stroke-linecap="round" pathLength="360" stroke-dasharray="110 250" stroke-dashoffset="-125"></circle>
+<circle cx="227" cy="227" r="205" fill="none" stroke="#242424" stroke-width="4" stroke-linecap="round" pathLength="360" stroke-dasharray="110 250" stroke-dashoffset="-305"></circle>
+<g filter="url(#mLift)">
+<circle cx="227" cy="227" r="205" fill="none" stroke="{{fs.c}}" stroke-width="16" stroke-linecap="round" pathLength="360" stroke-dasharray="{{fs.da}}" stroke-dashoffset="{{fs.off}}"></circle>
+<circle cx="227" cy="227" r="205" fill="none" stroke="{{fd.c}}" stroke-width="16" stroke-linecap="round" pathLength="360" stroke-dasharray="{{fd.da}}" stroke-dashoffset="{{fd.off}}"></circle>
+</g>
+<circle cx="109.4" cy="394.9" r="5" fill="#000000" stroke="#5a5a5a" stroke-width="1.5"></circle>
+<circle cx="344.6" cy="394.9" r="5" fill="#000000" stroke="#5a5a5a" stroke-width="1.5"></circle>
+</svg>
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2F2F2" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; left: 134px; top: 402px" aria-hidden="true"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"></path><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"></path><path d="M16 17h4"></path><path d="M4 13h4"></path></svg>
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8D5A8" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; left: 298px; top: 402px" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+<svg width="208" height="200" viewBox="16 24 168 162" style="position: absolute; left: 123px; top: 140px; overflow: visible" role="img" aria-label="{{ariaLabel}}">
+<defs>
+<g id="mShape">
+<g transform="{{bodyT}}">
+<sc-if value="{{flexArms}}" hint-placeholder-val="{{ true }}">
+<g transform="{{armBulkT}}">
+<g transform="{{curlT}}">
+<path d="M23 86 C20 74 26 60 38 48 L52 48 C48 56 43 64 38 72 C36 76 32 80 29 86 Z" fill="currentColor"></path>
+<path d="M36 49 C33 42 34 32 42 29 L54 29 C60 30 62 36 61 42 C60 47 57 50 52 50 Z" fill="currentColor"></path>
+</g>
+<path d="{{upperArm}}" fill="currentColor"></path>
+<ellipse cx="63" cy="86" rx="9.5" ry="10.5" fill="currentColor"></ellipse>
+</g>
+<g transform="translate(200 0) scale(-1 1)">
+<g transform="{{armBulkT}}">
+<g transform="{{rightT}}">
+<sc-if value="{{rightFlex}}" hint-placeholder-val="{{ true }}">
+<g transform="{{rCurlT}}">
+<path d="M23 86 C20 74 26 60 38 48 L52 48 C48 56 43 64 38 72 C36 76 32 80 29 86 Z" fill="currentColor"></path>
+<path d="M36 49 C33 42 34 32 42 29 L54 29 C60 30 62 36 61 42 C60 47 57 50 52 50 Z" fill="currentColor"></path>
+</g>
+<path d="{{rUpperArm}}" fill="currentColor"></path>
+</sc-if>
+<sc-if value="{{rightPunch}}" hint-placeholder-val="{{ false }}">
+<path d="M70 79 C63 70 54 59 46 49 L37 55 C44 65 52 77 57 93 Z" fill="currentColor"></path>
+<path d="M30 53 C25 47 27 38 33 34 C39 30 46 33 49 38 C51 44 48 51 41 55 Z" fill="currentColor"></path>
+</sc-if>
+<ellipse cx="63" cy="86" rx="9.5" ry="10.5" fill="currentColor"></ellipse>
+</g>
+</g>
+</g>
+</sc-if>
+<sc-if value="{{raisedArms}}" hint-placeholder-val="{{ false }}">
+<g transform="{{armBulkT}}">
+<g transform="{{raiseT}}">
+<path d="M58 96 C52 86 46 76 44 66 C42 58 40 50 37 42 L34 34 L47 31 C49 40 51 48 54 54 C60 58 66 64 68 72 C70 76 71 80 70 84 Z" fill="currentColor"></path>
+<path d="M30 34 C27 30 27 24 28 20 Q28 14 33 14 Q36 11 39 14 Q42 11 45 14 Q48 12 50 16 C51 22 50 28 48 32 C44 35 36 36 30 34 Z" fill="currentColor"></path>
+</g>
+<ellipse cx="63" cy="86" rx="9.5" ry="10.5" fill="currentColor"></ellipse>
+</g>
+<g transform="translate(200 0) scale(-1 1)">
+<g transform="{{armBulkT}}">
+<g transform="{{raiseT}}">
+<path d="M58 96 C52 86 46 76 44 66 C42 58 40 50 37 42 L34 34 L47 31 C49 40 51 48 54 54 C60 58 66 64 68 72 C70 76 71 80 70 84 Z" fill="currentColor"></path>
+<path d="M30 34 C27 30 27 24 28 20 Q28 14 33 14 Q36 11 39 14 Q42 11 45 14 Q48 12 50 16 C51 22 50 28 48 32 C44 35 36 36 30 34 Z" fill="currentColor"></path>
+</g>
+<ellipse cx="63" cy="86" rx="9.5" ry="10.5" fill="currentColor"></ellipse>
+</g>
+</g>
+</sc-if>
+<sc-if value="{{zombieArms}}" hint-placeholder-val="{{ false }}">
+<g transform="rotate(6 70 88)">
+<path d="M71 81 C59 83 47 85 35 87 L35 95 C47 95 59 94 71 93 Z" fill="currentColor"></path>
+<path d="M37 86 C32 86 28 89 29 94 C30 99 32 104 34 106 C37 104 38 99 38 94 Z" fill="currentColor"></path>
+</g>
+<g transform="translate(200 0) scale(-1 1)">
+<g transform="rotate(-9 70 88)">
+<path d="M71 81 C59 83 47 85 35 87 L35 95 C47 95 59 94 71 93 Z" fill="currentColor"></path>
+<path d="M37 86 C32 86 28 89 29 94 C30 99 32 104 34 106 C37 104 38 99 38 94 Z" fill="currentColor"></path>
+</g>
+</g>
+</sc-if>
+<sc-if value="{{downArms}}" hint-placeholder-val="{{ false }}">
+<path d="M68 80 C62 88 60 102 60 116 C60 128 61 138 62 147 L70 147 C71 138 72 126 72 114 C72 100 72 90 71 83 Z" fill="currentColor"></path>
+<path d="M60 145 L72 145 C74 150 74 156 73 160 Q72 164 69 163 Q67 166 65 163 Q63 166 61 163 Q58 163 58 159 C57 154 58 149 60 145 Z" fill="currentColor"></path>
+<g transform="translate(200 0) scale(-1 1)">
+<path d="M68 80 C62 88 60 102 60 116 C60 128 61 138 62 147 L70 147 C71 138 72 126 72 114 C72 100 72 90 71 83 Z" fill="currentColor"></path>
+<path d="M60 145 L72 145 C74 150 74 156 73 160 Q72 164 69 163 Q67 166 65 163 Q63 166 61 163 Q58 163 58 159 C57 154 58 149 60 145 Z" fill="currentColor"></path>
+</g>
+</sc-if>
+<g transform="{{torsoT}}"><path d="{{torso}}" fill="currentColor"></path></g>
+<g transform="{{headT}}">
+<path d="{{neck}}" fill="currentColor"></path>
+<ellipse cx="86.5" cy="51" rx="2.6" ry="5.2" fill="currentColor"></ellipse>
+<ellipse cx="113.5" cy="51" rx="2.6" ry="5.2" fill="currentColor"></ellipse>
+<path d="M87 44 C87 32 93 28 100 28 C107 28 113 32 113 44 L112 56 C111 64 107 69 100 70 C93 69 89 64 88 56 Z" fill="currentColor"></path>
+</g>
+</g>
+</g>
+<filter id="mOut" x="-20%" y="-20%" width="140%" height="140%"><feMorphology in="SourceAlpha" operator="dilate" radius="1.6" result="dil"></feMorphology><feFlood flood-color="{{lineC}}" result="col"></feFlood><feComposite in="col" in2="dil" operator="in" result="outline"></feComposite><feMerge><feMergeNode in="outline"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter>
+<filter id="mGlow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="b"></feGaussianBlur><feMerge><feMergeNode in="b"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter>
+<clipPath id="mWave"><path d="{{wave}}"></path></clipPath>
+<g id="mDetail">
+<g transform="{{bodyT}}">
+<g transform="{{armBulkT}}"><g transform="{{zL}}"><path d="{{armLines}}" fill="none" stroke="currentColor" stroke-width="1.1" stroke-opacity="0.7" stroke-linecap="round" stroke-linejoin="round"></path><g transform="{{curlT}}"><path d="{{armLinesB}}" fill="none" stroke="currentColor" stroke-width="1.1" stroke-opacity="0.7" stroke-linecap="round" stroke-linejoin="round"></path></g></g></g>
+<g transform="translate(200 0) scale(-1 1)"><g transform="{{armBulkT}}"><g transform="{{zR}}"><g transform="{{rightT}}"><path d="{{rLinesA}}" fill="none" stroke="currentColor" stroke-width="1.1" stroke-opacity="0.7" stroke-linecap="round" stroke-linejoin="round"></path><g transform="{{rCurlT}}"><path d="{{rLinesB}}" fill="none" stroke="currentColor" stroke-width="1.1" stroke-opacity="0.7" stroke-linecap="round" stroke-linejoin="round"></path></g></g></g></g></g>
+<path transform="{{torsoT}}" d="{{torsoLines}}" fill="none" stroke="currentColor" stroke-width="1.2" stroke-opacity="0.7" stroke-linecap="round"></path>
+<g transform="{{headT}}">
+<path d="{{face}}" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+</g>
+</g>
+</g>
+<clipPath id="mDry"><path d="{{dry}}"></path></clipPath>
+
+<sc-for list="{{rings}}" as="rg" hint-placeholder-count="3">
+<filter id="{{rg.id}}" x="-60%" y="-60%" width="220%" height="220%"><feMorphology in="SourceAlpha" operator="dilate" radius="{{rg.r}}" result="a"></feMorphology><feMorphology in="SourceAlpha" operator="dilate" radius="{{rg.r2}}" result="b"></feMorphology><feComposite in="a" in2="b" operator="out" result="ring"></feComposite><feFlood flood-color="#F3E2BC" flood-opacity="{{rg.o}}" result="c"></feFlood><feComposite in="c" in2="ring" operator="in"></feComposite></filter>
+</sc-for>
+</defs>
+<clipPath id="mTopOnly"><rect x="-200" y="-200" width="600" height="355"></rect></clipPath>
+<g clip-path="url(#mTopOnly)">
+<sc-for list="{{rings}}" as="rg" hint-placeholder-count="3">
+<use href="#mShape" color="#000000" filter="{{rg.url}}"></use>
+</sc-for>
+</g>
+<g filter="{{figGlow}}">
+<g filter="url(#mOut)" opacity="{{figOp}}">
+<use href="#mShape" color="{{baseC}}"></use>
+<g clip-path="url(#mWave)">
+<use href="#mShape" color="{{liquidC}}"></use>
+</g>
+</g>
+</g>
+<use href="#mDetail" color="{{lineC}}" clip-path="url(#mDry)"></use>
+<use href="#mDetail" color="#3a2f22" clip-path="url(#mWave)"></use>
+<sc-if value="{{dying}}" hint-placeholder-val="{{ false }}">
+<g transform="{{bodyT}}" opacity="{{figOp}}">
+<path d="M80 92 L86 100 L82 107 L89 116 L86 125 L91 133 M119 118 L114 125 L118 132 L112 141 L114 150 M108 80 L105 86 L109 92 M50 87 L53 91 L51 95 M152 84 L149 89 L151 93" fill="none" stroke="#0a0908" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"></path>
+<path d="M81 93 L87 101 L83 108 L90 117 M120 119 L115 126 L119 133" fill="none" stroke="#cfe09a" stroke-width="0.7" stroke-opacity="0.8" stroke-linejoin="round"></path>
+<g transform="{{headT}}">
+<path d="M97 30 L101 38 L97 44 L102 51 M111 55 L107 60" fill="none" stroke="#0a0908" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
+<path d="M91 46 L97 52 M97 46 L91 52 M103 46.5 L109 52.5 M109 46.5 L103 52.5" fill="none" stroke="#E2F0A8" stroke-width="2.2" stroke-linecap="round"></path>
+<ellipse cx="100" cy="63" rx="3.2" ry="2.6" fill="#050504"></ellipse>
+</g>
+</g>
+</sc-if>
+<g transform="{{bodyT}}">
+<path d="M79 160 L121 160" fill="none" stroke="{{lineC}}" stroke-width="2.4" stroke-linecap="round"></path>
+</g>
+<sc-for list="{{drops}}" as="dp" hint-placeholder-count="6">
+<path d="{{dp.d}}" fill="#BFE0F2" opacity="{{dp.o}}"></path>
+</sc-for>
+<g transform="{{bodyT}}"><g transform="{{burstT}}"><path d="{{burst}}" fill="none" stroke="#F7ECD3" stroke-width="1.8" stroke-linecap="round"></path></g><g transform="translate(200 0) scale(-1 1)"><g transform="{{burstT}}"><path d="{{burst}}" fill="none" stroke="#F7ECD3" stroke-width="1.8" stroke-linecap="round"></path></g></g></g>
+<sc-for list="{{sparks}}" as="sp" hint-placeholder-count="8">
+<path d="{{sp.d}}" fill="#F7ECD3" opacity="{{sp.o}}"></path>
+</sc-for>
+<sc-for list="{{zzz}}" as="z" hint-placeholder-count="3">
+<text x="{{z.x}}" y="{{z.y}}" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="{{z.s}}" fill="#C9B78F" opacity="{{z.o}}">z</text>
+</sc-for>
+</svg>
+<div style="position: absolute; left: 0; top: 30px; width: 454px; display: flex; flex-direction: column; align-items: center; gap: 4px">
+<div style="font-size: 15px; font-weight: 600; line-height: 1; letter-spacing: 3px; color: #bdbdbd; padding-left: 3px">THU 5 NOV</div>
+<div style="display: flex; align-items: flex-start">
+<div style="font-size: 66px; font-weight: 700; line-height: 0.85; letter-spacing: -3px; padding: 6px 3px; margin: -6px -3px; background: linear-gradient(180deg, #ffffff 0%, #f2f2f2 50%, #b4b4b4 100%); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 4px 5px rgba(0,0,0,0.95))">{{hh}}</div>
+<div style="position: relative; font-size: 66px; font-weight: 700; line-height: 0.85; letter-spacing: -3px; padding: 6px 3px; margin: -6px -3px -6px -4px; background: linear-gradient(180deg, #F7ECD3 0%, #D6C397 100%); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(-4px 2px 4px rgba(0,0,0,0.95))">{{mm}}</div>
+</div>
+</div>
+<div style="position: absolute; left: 0; top: 318px; width: 454px; display: flex; flex-direction: column; align-items: center; gap: 3px">
+<div style="font-size: 16px; font-weight: 700; line-height: 1; letter-spacing: 3px; color: {{stateC}}; opacity: {{stateOp}}; padding-left: 3px">{{stateLabel}}</div>
+<div style="display: flex; align-items: baseline; gap: 4px; filter: drop-shadow(0 0 6px rgba(0,0,0,1))">
+<span style="font-size: 46px; font-weight: 700; line-height: 1; color: {{gramsC}}">{{grams}}</span>
+<span style="font-size: 20px; font-weight: 600; line-height: 1; color: {{gramsC}}">g</span>
+<span style="font-size: 19px; font-weight: 500; line-height: 1; color: #8c8c8c; margin-left: 4px">/ {{gramsTarget}} g</span>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"deficit":{"editor":"range","default":423,"min":0,"max":1700,"step":10,"section":"Preview"},"gramsTarget":{"editor":"int","default":200,"section":"Preview"},"stepsDone":{"editor":"range","default":0.64,"min":0,"max":1,"step":0.01,"section":"Preview"},"nzHour":{"editor":"range","default":14.53,"min":0,"max":23.99,"step":0.25,"section":"Preview"},"animate":{"editor":"boolean","default":true,"section":"Preview"},"$preview":{"width":454,"height":454}}'>
+class Component extends DCLogic {
+componentDidMount() {
+this.timer = setInterval(() => {
+if (this.props.animate === false) return;
+const s = Math.floor(Date.now() / 1000);
+if (!this.state || this.state.sec !== s) this.setState({ sec: s });
+}, 250);
+}
+componentWillUnmount() {
+clearInterval(this.timer);
+}
+renderVals() {
+const num = (v, d) => { const n = parseFloat(v); return isNaN(n) ? d : n; };
+const pad = (n) => String(n).padStart(2, '0');
+const nzHour = ((num(this.props.nzHour, 14.53) % 24) + 24) % 24;
+let hh = Math.floor(nzHour);
+let mm = Math.round((nzHour - hh) * 60);
+if (mm === 60) { mm = 0; hh = (hh + 1) % 24; }
+
+const deficit = Math.max(0, num(this.props.deficit, 423));
+const gramsTarget = Math.max(20, Math.round(num(this.props.gramsTarget, 200)));
+const target = gramsTarget * 7.7;
+const grams = Math.round(deficit / 7.7);
+const thresholds = [100, 250, 750, target];
+let raw = 0;
+for (const th of thresholds) if (deficit >= th) raw++;
+const L = [0, 1, 3, 4, 5][raw];
+const labels = ['DYING', 'RESTING', 'WARMING UP', 'ACTIVE', 'INTENSE', 'TARGET REACHED'];
+const p = Math.max(0, Math.min(1, deficit / target));
+
+const sec = (this.state && this.state.sec) || 0;
+const odd = sec % 2 === 1;
+const slowOdd = Math.floor(sec / 2) % 2 === 1;
+
+const bodyT = L === 0 ? (odd ? 'rotate(-4 100 160) translate(-1 4)' : 'rotate(4 100 160) translate(1 4)') : L === 5 && sec % 2 === 1 ? 'translate(0 -5)' : 'translate(0 0)';
+const headT = L === 0 ? (odd ? 'rotate(17 100 76) translate(0 5)' : 'rotate(-17 100 76) translate(0 5)') : 'rotate(0 100 74)';
+const punchStep = L === 5 ? sec % 4 : 0;
+const sq = (L === 3 || L === 4) && odd ? 1 : 0;
+const sx = { 3: 0.86, 4: 1.0, 5: 1.15 }[L] || 1;
+const as = { 3: 0.8, 4: 1.0, 5: 1.2 }[L] || 1;
+const armBulkT = L >= 3 ? 'translate(' + ((63 - 100) * (sx - 1)).toFixed(2) + ' 0) translate(63 86) scale(' + as + ') translate(-63 -86)' : 'translate(0 0)';
+const torsoT = L >= 3 ? 'translate(100 0) scale(' + sx + ' 1) translate(-100 0)' : 'translate(0 0)';
+const raiseT = L === 5 && punchStep % 2 === 1 ? 'rotate(-16 63 86)' : 'rotate(-8 63 86)';
+const upperArm = 'M66 78 C58 ' + (71 - 3 * sq) + ' 50 ' + (67 - 4 * sq) + ' 42 ' + (68 - 3 * sq) + ' C36 ' + (69 - 3 * sq) + ' 33 71 32 75 L29 77 C23 80 21 86 23 91 C27 96 36 99 48 99 C56 99 62 98 66 95 Z';
+const curlT = sq ? 'rotate(3 30 80)' : 'rotate(0 30 80)';
+const armLines = L === 5 ? 'M54 56 C58 62 62 66 66 74 M44 64 C47 62 50 60 54 58 M40 48 C42 44 43 40 44 36 M33.5 15 L33.5 21.5 M39 14.5 L39 21.5 M45 14.5 L45 21.5 M29 21.5 L50 21.5 M30 27 C36 24.5 42 25 47.5 28 M58 80 C60 86 61 92 60 96' : L === 0 ? 'M68 84 C58 85 48 86 38 88 M68 92 C58 92 48 93 38 94 M31 100 L31.5 105 M34 101 L34.2 107 M36.5 100 L36.3 104' : L >= 2 ? 'M66 80 C58 ' + (73 - 3 * sq) + ' 50 ' + (69 - 4 * sq) + ' 42 ' + (70 - 3 * sq) + ' C37 ' + (71 - 3 * sq) + ' 34 72 33 76 M62 91 C52 89 40 87 31 82 M56 80 C60 84 62 90 61 96' : 'M61 156 L61 162.5 M65 156.5 L65 163.5 M69 156 L69 162.5 M58.5 155.5 L73.5 155.5 M60 150 C63 152 67 152 71 150.5 M70.5 86 C71.5 102 72 122 71 146 M61 118 C63 116 67 116 70 118';
+const armLinesB = L === 3 || L === 4 ? 'M38 49 L53 49 M33 75 C31 80 29 83 26 86 M45 30 L45 35 M50 30 L50 35 M55 31 L55 36 M40 44 C45 42 51 42 56 44' : '';
+
+const BASE = 'M100 47 L99 56 Q100 57.5 101.5 56.5 M97.5 56 Q99 57.5 100 57 M102.5 56 Q101 57.5 100 57 M98 66 Q100 67 102 66 M90 56 Q92 60 95 63 M110 56 Q108 60 105 63';
+const face = L === 0 ? 'M100 47 L99 56 Q100 57.5 101.5 56.5 M90 56 Q92 60 95 63 M110 56 Q108 60 105 63' : BASE + ' M90.5 45 L97 44.5 M103 44.5 L109.5 45 M92 48.5 Q94 47.6 96 48.5 M104 48.5 Q106 47.6 108 48.5 M93.4 49.4 L94.6 49.4 M105.4 49.4 L106.6 49.4 M96 61.6 L104 61.6';
+
+const surface = L === 0 ? 200 : p >= 0.995 ? -60 : 162 - p * 136;
+let wave = 'M-120 260 L-120 ' + surface.toFixed(1);
+for (let x = -120; x <= 320; x += 10) {
+const y = surface + (p > 0.995 ? 0 : Math.sin(x / 9) * 1.4);
+wave += ' L' + x + ' ' + y.toFixed(2);
+}
+wave += ' L320 260 Z';
+let dry = 'M-120 -200 L320 -200';
+const wp = wave.split(' L').slice(1, -1).reverse();
+dry += ' L' + wp.join(' L') + ' Z';
+
+const zStep = sec % 3;
+const zzz = L === 1 ? [0, 1, 2].filter((k) => k <= zStep).map((k) => ({ x: 120 + k * 7, y: 40 - k * 9, s: 9 + k * 3, o: k === zStep ? 1 : 0.45 })) : [];
+const dropAt = (x, y, s) => 'M' + x + ' ' + y + ' q' + (-3.2 * s).toFixed(2) + ' ' + (4.6 * s).toFixed(2) + ' 0 ' + (6.6 * s).toFixed(2) + ' q' + (3.2 * s).toFixed(2) + ' ' + (-2 * s).toFixed(2) + ' 0 ' + (-6.6 * s).toFixed(2) + ' Z';
+const dropSeeds = [[118, 36, 1, 0], [82, 38, 0.9, 1], [121, 52, 0.8, 2], [79, 54, 0.75, 0], [30, 36, 0.8, 1], [170, 36, 0.8, 2], [104, 30, 0.7, 1], [58, 101, 0.95, 0], [48, 100, 0.8, 2], [38, 98, 0.7, 1], [142, 101, 0.95, 1], [152, 100, 0.8, 0], [162, 98, 0.7, 2]];
+const drops = L === 4 ? dropSeeds.map((d) => { const q = (sec + d[3]) % 3; const fall = d[1] > 90 ? 8 : 6; return { d: dropAt(d[0], d[1] + q * fall, d[2]), o: (0.95 - q * 0.25).toFixed(2) }; }) : [];
+const star = (x, y, s) => 'M' + x + ' ' + (y - s) + ' Q' + x + ' ' + y + ' ' + (x + s) + ' ' + y + ' Q' + x + ' ' + y + ' ' + x + ' ' + (y + s) + ' Q' + x + ' ' + y + ' ' + (x - s) + ' ' + y + ' Q' + x + ' ' + y + ' ' + x + ' ' + (y - s) + ' Z';
+const sparkSeeds = [[14, 56, 0], [186, 58, 1], [70, 26, 2], [130, 24, 0], [16, 108, 1], [184, 104, 2], [30, 146, 0], [170, 148, 1]];
+const sparks = L === 5 ? sparkSeeds.map((s) => { const q = (sec + s[2]) % 3; const sz = [6, 3.5, 1.5][q]; return { d: star(s[0], s[1], sz), o: [1, 0.6, 0.25][q] }; }) : [];
+
+const rightPunch = false;
+const ringStep = sec % 3;
+const rings = false ? [0, 1, 2].map((k) => {
+const r = 4 + k * 5;
+const o = k === ringStep ? 0.9 : k === (ringStep + 2) % 3 ? 0.32 : 0.1;
+return { id: 'mRing' + k, url: 'url(#mRing' + k + ')', r, r2: r - 1.4, o };
+}) : [];
+
+const skinny = L <= 1;
+const torso = skinny ? 'M90 72 C84 75 76 76 70 80 C66 90 68 104 72 114 C76 128 80 144 84 160 L116 160 C120 144 124 128 128 114 C132 104 134 90 130 80 C124 76 116 75 110 72 Z' : 'M88 72 C80 76 69 76 60 82 C55 92 57 104 62 112 C67 126 76 142 82 160 L118 160 C124 142 133 126 138 112 C143 104 145 92 140 82 C131 76 120 76 112 72 Z';
+const neck = skinny ? 'M94 62 L106 62 L109 76 L91 76 Z' : 'M91 62 L109 62 L114 76 L86 76 Z';
+const torsoLines = skinny ? 'M90 76 C84 78 78 79 72 81 M110 76 C116 78 122 79 128 81 M100 84 L100 114 M86 94 C82 96 78 99 75 103 M86 102 C82 104 78 107 76 111 M87 110 C83 112 80 115 78 119 M114 94 C118 96 122 99 125 103 M114 102 C118 104 122 107 124 111 M113 110 C117 112 120 115 122 119 M92 136 C96 140 104 140 108 136 M100 140 L100 146' : 'M100 86 C92 100 78 102 68 94 M100 86 C108 100 122 102 132 94 M92 68 C86 72 78 74 70 77 M108 68 C114 72 122 74 130 77 M100 104 L100 154 M89 114 C95 116 105 116 111 114 M89 126 C95 128 105 128 111 126 M90 138 C95 140 105 140 110 138 M87 106 C84 124 85 142 90 156 M113 106 C116 124 115 142 110 156 M74 108 L79 112 M75 116 L80 119 M77 124 L81 126 M126 108 L121 112 M125 116 L120 119 M123 124 L119 126';
+const lineC = ['#B4C98A', '#9c917a', '#D2C09A', '#E2CFA4', '#EBD9AE', '#F7ECD3'][L];
+const liquidC = L === 0 ? '#6b665d' : '#E8D5A8';
+
+const norm = (d) => ((d % 360) + 360) % 360;
+const sDone = Math.max(0, Math.min(1, num(this.props.stepsDone, 0.64)));
+const sLen = 110 * sDone;
+const dLen = 110 * p;
+const fill = (len, start, col) => ({ da: len.toFixed(2) + ' ' + (360 - len).toFixed(2), off: -norm(start), c: len > 0.5 ? col : 'transparent' });
+
+return {
+hh: pad(hh),
+mm: pad(mm),
+grams,
+gramsTarget,
+kcal: Math.round(deficit).toLocaleString('en-NZ'),
+stateLabel: labels[L],
+stateC: L === 0 ? '#FF7B6B' : '#FFFFFF',
+gramsC: L === 0 ? '#c9c0b0' : '#E8D5A8',
+bodyT,
+headT,
+armLines,
+armLinesB,
+upperArm,
+curlT,
+rightT: 'rotate(0 63 86)',
+rightFlex: !rightPunch,
+rightPunch,
+rCurlT: curlT,
+rUpperArm: upperArm,
+rLinesA: rightPunch ? 'M66 83 C59 74 51 63 45 54 M60 92 C55 82 48 70 42 60 M33 46 C37 42 42 40 46 41 M31 41 L35 37 M35 37 L40 34' : armLines,
+rLinesB: rightPunch ? '' : armLinesB,
+burst: '',
+flexArms: L === 3 || L === 4,
+raisedArms: L === 5,
+raiseT,
+burstT: armBulkT + ' ' + raiseT,
+armBulkT,
+torsoT,
+downArms: L === 1,
+zombieArms: L === 0,
+zL: L === 0 ? 'rotate(6 70 88)' : L === 5 ? raiseT : 'rotate(0)',
+zR: L === 0 ? 'rotate(-9 70 88)' : L === 5 ? raiseT : 'rotate(0)',
+torso,
+neck,
+torsoLines,
+drops,
+sparks,
+baseC: L === 0 ? '#243020' : '#1d1914',
+wave,
+lineC,
+liquidC,
+figOp: L === 0 ? (odd ? 0.82 : 1) : 1,
+dying: L === 0,
+stateOp: L === 0 ? (odd ? 0.45 : 1) : 1,
+figGlow: L === 5 ? 'url(#mGlow)' : 'none',
+dry,
+face,
+zzz,
+rings,
+fs: fill(sLen, 125, 'url(#mSteps)'),
+fd: fill(dLen, 55 - dLen, 'url(#mDef)'),
+ariaLabel: 'Muscle man, ' + labels[L].toLowerCase() + ', ' + grams + ' grams fat equivalent'
+};
+}
+}
+</script>
+</body>
+</html>
